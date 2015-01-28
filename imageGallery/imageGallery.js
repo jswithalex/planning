@@ -20,12 +20,14 @@ var placeholder = document.getElementById('placeholder');
 // event listener on the image list 
 // we put (e) inside the function call so that we can have access to the onclick event
 img_list.onclick = function(e) {
+  
+  // prevent default behavior, i.e., make sure the link doesn't take us to that image on its own page
+  e.preventDefault();
+  
   // if the thing clicked on is an 'A' node, do the stuff in the code block
   if (e.target.nodeName === 'A')
   {
     var link_href = e.target.getAttribute('href');
     placeholder.setAttribute('src',link_href);
   }
-  e.preventDefault();
-
 }
