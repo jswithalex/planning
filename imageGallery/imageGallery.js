@@ -13,14 +13,19 @@
 *   If it the thing that was clicked on was an 'A', we replace the image's src attribute with the link's href
 */
 
-// 
+// get handles for image list and initial placeholder image
 var img_list = document.getElementById("image-list");
 var placeholder = document.getElementById('placeholder');
 
-// event listener on any <a> 
+// event listener on the image list 
+// we put (e) inside the function call so that we can have access to the onclick event
 img_list.onclick = function(e) {
- var link_href = e.target.getAttribute('href');
- placeholder.setAttribute('src',link_href);
+  // if the thing clicked on is an 'A' node, do the stuff in the code block
+  if (e.target.nodeName === 'A')
+  {
+    var link_href = e.target.getAttribute('href');
+    placeholder.setAttribute('src',link_href);
+  }
+  e.preventDefault();
 
- e.preventDefault();
 }
