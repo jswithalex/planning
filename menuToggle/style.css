@@ -156,3 +156,37 @@ a
   text-decoration: none;
 }
 
+@media (max-width: 730px)
+{
+	li:first-child
+	{
+		display: inline-block;	
+		width: 100%;
+	}
+
+	li:first-child:hover
+	{
+		background: none;
+	}
+
+	li
+	{
+		padding: 0;
+	}
+
+	a:hover
+	{ 
+		background: rgba(28,240,240,.9);
+	}
+
+	img
+	{
+		height: 100%;
+	}
+
+	.content
+	{
+		padding-top: 250px;
+		width: 90%;
+	}
+}
